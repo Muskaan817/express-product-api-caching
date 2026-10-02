@@ -14,7 +14,6 @@ async function addProduct(product) {
         id: products.length + 1,
         ...product
     };
-
     products.push(newProduct);
     await fs.writeFile(
         filepath,
