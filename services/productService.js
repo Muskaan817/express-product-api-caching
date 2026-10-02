@@ -9,7 +9,22 @@ async function getProductById(id) {
     return products.find(product=>product.id===Number(id))
 }
 
+async function addProduct(product) {
+    return await productDatabase.addProduct(product);
+}
+
+async function updateProduct(id, data) {
+    return await productDatabase.updateProduct(id, data);
+}
+
+async function deleteProduct(id) {
+    return await productDatabase.deleteProduct(id);
+}
+
 module.exports = {
     getProducts,
-    getProductById
+    getProductById,
+    addProduct,
+    updateProduct,
+    deleteProduct
 };
